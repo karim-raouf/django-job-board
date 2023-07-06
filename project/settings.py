@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     #my apps 
     'job',
     "bootstrap4",
-    
-   
+    'django_filters',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +138,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'karimraoufm@gmail.com'
+EMAIL_HOST_PASSWORD = 'jpfwxvjmeivdwzer'
+EMAIL_USE_TLS = True
+EMAIL_PORT = '587'
